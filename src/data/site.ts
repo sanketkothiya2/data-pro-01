@@ -8,7 +8,7 @@ export const site = {
   phone: "+1 226-975-7452",
   showPhone: true,
   github: "https://github.com/sanketkothiya",
-  linkedin: "https://www.linkedin.com/in/sanketkothiya",
+  linkedin: "https://www.linkedin.com/in/sanket-kothiya",
   resumePath: "/Sanket_Kothiya_Resume.pdf",
   photo: "/sanket.png",
   summary:
