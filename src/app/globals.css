@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
+@theme {
+  --color-base: #0a0a0b;
+  --color-base-2: #111114;
+  --color-surface: #15151a;
+  --color-ink: #f4f2ed;
+  --color-ink-dim: #a8a59e;
+  --color-ink-faint: #6b6862;
+
+  --color-amber: #ffd23f;
+  --color-gold: #fab12f;
+  --color-honey: #f78f1e;
+  --color-ember: #ff7a45;
+
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jbmono);
+
+  --shadow-glow: 0 0 80px -20px rgba(250, 177, 47, 0.45);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-gold), var(--color-honey));
+  border-radius: 999px;
+  border: 2px solid var(--color-base);
+}
+
+::selection {
+  background: var(--color-amber);
+  color: #0a0a0b;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      var(--color-amber),
+      var(--color-gold) 45%,
+      var(--color-ember)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grain {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .ring-amber {
+    box-shadow: 0 0 0 1px rgba(250, 177, 47, 0.35),
+      0 0 40px -10px rgba(250, 177, 47, 0.4);
+  }
+}
+
+/* Animated aurora blobs */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(6%, -8%) scale(1.08); }
+  66% { transform: translate(-5%, 5%) scale(0.95); }
+}
+@keyframes float-slow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, 10%) scale(1.12); }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-float-slow { animation: float-slow 18s ease-in-out infinite; }
+.animate-float-slow-2 { animation: float-slow-2 22s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 40s linear infinite; }
+.animate-marquee { animation: marquee 38s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-slow-2,
+  .animate-spin-slow,
+  .animate-marquee {
+    animation: none;
+  }
 }
