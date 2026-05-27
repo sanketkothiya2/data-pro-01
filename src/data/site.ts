@@ -10,6 +10,7 @@ export const site = {
   github: "https://github.com/sanketkothiya",
   linkedin: "https://www.linkedin.com/in/sanketkothiya",
   resumePath: "/Sanket_Kothiya_Resume.pdf",
+  photo: "/sanket.png",
   summary:
     "Data Analyst with 4+ years turning complex datasets into business insight. I work across SQL, Python and BI tooling (Power BI, Tableau) to clean, model and visualize data — building dashboards and pipelines that make reporting faster and decisions sharper.",
 };

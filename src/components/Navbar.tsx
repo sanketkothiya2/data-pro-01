@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       <nav
         className={cn(
-          "flex w-full max-w-5xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 md:px-6",
+          "flex w-full max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 md:px-6",
           scrolled ? "glass ring-amber" : "border border-transparent"
         )}
       >
@@ -52,7 +52,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="rounded-lg px-3 py-2 text-sm text-ink-dim transition-colors hover:text-amber"
+              className="rounded-lg px-3 py-2 text-sm text-ink-dim transition-colors hover:text-cyan"
             >
               {l.label}
             </a>

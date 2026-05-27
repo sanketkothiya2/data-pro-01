@@ -1,8 +1,22 @@
+export type Category =
+  | "Machine Learning"
+  | "Statistical Analysis"
+  | "BI & Data Apps"
+  | "SQL & EDA";
+
+export const categories: Category[] = [
+  "Machine Learning",
+  "Statistical Analysis",
+  "BI & Data Apps",
+  "SQL & EDA",
+];
+
 export type Project = {
   slug: string;
   title: string;
   blurb: string;
   domain: string;
+  category: Category;
   year: string;
   featured?: boolean;
   metrics: { value: string; label: string }[];
@@ -17,6 +31,7 @@ export const projects: Project[] = [
     slug: "jlr-ai-benchmark",
     title: "AI Benchmarking & GPU Performance Prediction",
     domain: "Machine Learning · Jaguar Land Rover",
+    category: "Machine Learning",
     year: "2025",
     featured: true,
     blurb:
@@ -39,6 +54,7 @@ export const projects: Project[] = [
     slug: "marketing-ab-testing",
     title: "Marketing Campaign A/B Testing & Regression",
     domain: "Statistical Analysis",
+    category: "Statistical Analysis",
     year: "2024",
     featured: true,
     blurb:
@@ -60,6 +76,7 @@ export const projects: Project[] = [
     slug: "nyc-taxi-revenue",
     title: "Maximizing Driver Revenue — NYC Taxi",
     domain: "Hypothesis Testing",
+    category: "Statistical Analysis",
     year: "2024",
     blurb:
       "Tested whether payment method drives fare size across NYC yellow-cab trips, then quantified the revenue upside of nudging riders toward card payments.",
@@ -80,6 +97,7 @@ export const projects: Project[] = [
     slug: "airlines-occupancy",
     title: "Aviation Performance & Occupancy",
     domain: "SQL · Revenue Analytics",
+    category: "SQL & EDA",
     year: "2024",
     blurb:
       "Explored an airline's booking and fare data in SQLite to find where empty seats bleed revenue — and modeled the upside of a 10% occupancy lift.",
@@ -100,6 +118,7 @@ export const projects: Project[] = [
     slug: "capm-app",
     title: "CAPM Financial Analysis Web App",
     domain: "FinTech · Streamlit",
+    category: "BI & Data Apps",
     year: "2024",
     featured: true,
     blurb:
@@ -121,6 +140,7 @@ export const projects: Project[] = [
     slug: "yelp-engagement",
     title: "Yelp User Engagement Analysis",
     domain: "SQL + Python",
+    category: "SQL & EDA",
     year: "2024",
     blurb:
       "End-to-end study of whether user engagement predicts restaurant success — from loading raw Yelp JSON into SQLite to a custom success score and sentiment cuts.",
@@ -141,6 +161,7 @@ export const projects: Project[] = [
     slug: "hotel-cancellations",
     title: "Hotel Booking Cancellation Analysis",
     domain: "Exploratory Analysis",
+    category: "SQL & EDA",
     year: "2024",
     blurb:
       "Dug into why hotel bookings get cancelled — separating City vs Resort behavior and linking price, season and channel mix to cancellation pressure.",
@@ -161,6 +182,7 @@ export const projects: Project[] = [
     slug: "vendor-performance",
     title: "Vendor Performance Analysis",
     domain: "Business Intelligence · Power BI",
+    category: "BI & Data Apps",
     year: "2024",
     blurb:
       "Company-style vendor analytics combining a SQLite ingestion pipeline, statistical testing and a Power BI dashboard to guide pricing, purchasing and inventory.",

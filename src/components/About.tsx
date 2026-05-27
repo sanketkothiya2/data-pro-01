@@ -8,7 +8,7 @@ import CountUp from "./ui/CountUp";
 export default function About() {
   return (
     <section id="about" className="relative px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <SectionHeading index="01" kicker="About" title="Data with a point of view." />
 
         <div className="grid gap-12 md:grid-cols-5">
@@ -27,9 +27,9 @@ export default function About() {
               <Reveal
                 key={s.label}
                 delay={i * 0.08}
-                className="glass rounded-2xl p-5"
+                className="glass rounded-2xl p-5 transition-colors hover:border-cyan/40"
               >
-                <div className="font-display text-4xl font-bold text-gradient">
+                <div className={`font-display text-4xl font-bold ${i % 2 ? "text-gradient-cool" : "text-gradient"}`}>
                   <CountUp to={s.value} suffix={s.suffix} />
                 </div>
                 <div className="mt-1 text-sm text-ink-dim">{s.label}</div>

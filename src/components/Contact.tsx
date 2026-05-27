@@ -9,17 +9,17 @@ import { Github, Linkedin } from "./ui/BrandIcons";
 export default function Contact() {
   return (
     <section id="contact" className="relative px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto max-w-5xl">
-        <Reveal className="flex items-center gap-3 font-mono text-sm text-honey">
+      <div className="mx-auto max-w-6xl">
+        <Reveal className="flex items-center gap-3 font-mono text-sm text-cyan">
           <span className="text-amber">05</span>
-          <span className="h-px w-10 bg-honey/50" />
+          <span className="h-px w-10 bg-gradient-to-r from-amber to-cyan" />
           Contact
         </Reveal>
 
         <Reveal delay={0.05}>
           <h2 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-7xl">
             Let&apos;s turn your data into{" "}
-            <span className="text-gradient">decisions.</span>
+            <span className="text-gradient-duo">decisions.</span>
           </h2>
         </Reveal>
 
@@ -43,7 +43,7 @@ export default function Contact() {
           <a
             href={site.resumePath}
             download
-            className="flex items-center gap-2 rounded-2xl glass px-7 py-4 font-medium text-ink transition-colors hover:text-amber"
+            className="flex items-center gap-2 rounded-2xl glass px-7 py-4 font-medium text-ink transition-colors hover:text-cyan"
           >
             <FileDown size={18} /> Download résumé
           </a>
@@ -54,7 +54,7 @@ export default function Contact() {
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-amber"
+            className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-cyan"
           >
             <Github size={16} /> GitHub
           </a>
@@ -62,14 +62,14 @@ export default function Contact() {
             href={site.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-amber"
+            className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-cyan"
           >
             <Linkedin size={16} /> LinkedIn
           </a>
           {site.showPhone && (
             <a
               href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}
-              className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-amber"
+              className="flex items-center gap-2 rounded-xl glass px-4 py-3 text-sm text-ink-dim transition-colors hover:text-cyan"
             >
               <Phone size={16} /> {site.phone}
             </a>

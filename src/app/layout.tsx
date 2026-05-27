@@ -40,7 +40,7 @@ export default function RootLayout({
       lang="en"
       className={`${sora.variable} ${inter.variable} ${jbmono.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <SmoothScroll>
           <ScrollProgress />
           <Navbar />

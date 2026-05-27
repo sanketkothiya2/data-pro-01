@@ -11,9 +11,9 @@ export default function SectionHeading({
 }) {
   return (
     <div className="mb-12 md:mb-16">
-      <Reveal className="flex items-center gap-3 font-mono text-sm text-honey">
+      <Reveal className="flex items-center gap-3 font-mono text-sm text-cyan">
         <span className="text-amber">{index}</span>
-        <span className="h-px w-10 bg-honey/50" />
+        <span className="h-px w-10 bg-gradient-to-r from-amber to-cyan" />
         {kicker}
       </Reveal>
       <Reveal delay={0.05}>
