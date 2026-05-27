@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls -lt \"C:/Users/sanke/Downloads\" 2>/dev/null | grep -iE '\\\\.\\(jpg|jpeg|png|webp\\)' | head -10; echo \"---temp clipboard---\"; ls -lt \"C:/Users/sanke/AppData/Local/Temp\" 2>/dev/null | grep -iE '\\\\.\\(jpg|jpeg|png|webp\\)' | head -10)"
+    ]
+  }
+}
