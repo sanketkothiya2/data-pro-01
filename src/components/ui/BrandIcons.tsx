@@ -15,6 +15,29 @@ export function Github({ size = 20, className }: IconProps) {
   );
 }
 
+export function CanadaFlag({ size = 18, className }: IconProps) {
+  const w = size * 2; // 2:1 flag aspect ratio
+  return (
+    <svg
+      width={w}
+      height={size}
+      viewBox="0 0 40 20"
+      className={className}
+      aria-label="Canada"
+      role="img"
+    >
+      <rect x="0" y="0" width="10" height="20" fill="#D52B1E" />
+      <rect x="30" y="0" width="10" height="20" fill="#D52B1E" />
+      <rect x="10" y="0" width="20" height="20" fill="#ffffff" />
+      {/* simplified maple leaf, centered at (20, 10) */}
+      <path
+        d="M20 3.5 L21 6 L23.5 5.5 L22.5 7.5 L25 7.7 L23 9 L24 11.5 L21 11 L21 13.5 L20 13 L19 13.5 L19 11 L16 11.5 L17 9 L15 7.7 L17.5 7.5 L16.5 5.5 L19 6 Z"
+        fill="#D52B1E"
+      />
+    </svg>
+  );
+}
+
 export function Linkedin({ size = 20, className }: IconProps) {
   return (
     <svg

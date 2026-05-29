@@ -2,10 +2,10 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState } from "react";
-import { ArrowDownRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowDownRight, Sparkles } from "lucide-react";
 import { site } from "@/data/site";
 import Magnetic from "./ui/Magnetic";
-import { Github, Linkedin } from "./ui/BrandIcons";
+import { Github, Linkedin, CanadaFlag } from "./ui/BrandIcons";
 import { TechIcon } from "./ui/tech";
 import { useMounted } from "@/lib/useMounted";
 
@@ -67,9 +67,10 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mb-4 flex items-center gap-2 font-mono text-sm text-ink-dim"
+            className="mb-4 flex items-center gap-2.5 font-mono text-sm text-ink-dim"
           >
-            <MapPin size={14} className="text-cyan" /> {site.location}
+            <CanadaFlag size={14} className="rounded-[2px] ring-1 ring-white/10" />
+            {site.location}
           </motion.p>
 
           <motion.h1
