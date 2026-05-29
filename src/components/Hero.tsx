@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { ArrowDownRight, Sparkles } from "lucide-react";
 import { site } from "@/data/site";
 import Magnetic from "./ui/Magnetic";
-import { Github, Linkedin, CanadaFlag } from "./ui/BrandIcons";
+import { Github, Linkedin } from "./ui/BrandIcons";
 import { TechIcon } from "./ui/tech";
 import { useMounted } from "@/lib/useMounted";
 
@@ -64,14 +64,6 @@ export default function Hero() {
             </span>
             Open to Data Analyst roles
           </motion.div>
-
-          <motion.p
-            variants={item}
-            className="mb-4 flex items-center gap-2.5 font-mono text-sm text-ink-dim"
-          >
-            <CanadaFlag size={14} className="rounded-[2px] ring-1 ring-white/10" />
-            {site.location}
-          </motion.p>
 
           <motion.h1
             variants={item}
