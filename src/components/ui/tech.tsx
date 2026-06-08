@@ -17,6 +17,7 @@ import {
   SiKeras,
   SiJupyter,
   SiGooglebigquery,
+  SiTypescript,
 } from "react-icons/si";
 import { FaFileExcel, FaAws, FaDatabase, FaChartLine } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
@@ -63,6 +64,10 @@ const colors: Record<string, string> = {
   Streamlit: "#ff6b6b",
   R: "#5da9e0",
   JavaScript: "#ffd23f",
+  TypeScript: "#5da9e0",
+  "Microsoft Fabric": "#5da9e0",
+  "Data Validation": "#9b8cff",
+  "Data Modeling": "#9b8cff",
   Tableau: "#f59b5b",
   "Power BI": "#ffd23f",
   "Excel (VBA)": "#4cc38a",
@@ -101,6 +106,7 @@ const map: Record<string, IconType> = {
   Streamlit: SiStreamlit,
   R: SiR,
   JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
   MongoDB: SiMongodb,
   GCP: SiGooglecloud,
   "Google Cloud Platform": SiGooglecloud,

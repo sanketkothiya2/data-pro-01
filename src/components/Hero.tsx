@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState } from "react";
-import { ArrowDownRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowDownRight, Sparkles } from "lucide-react";
 import { site } from "@/data/site";
 import Magnetic from "./ui/Magnetic";
 import { Github, Linkedin } from "./ui/BrandIcons";
@@ -64,13 +64,6 @@ export default function Hero() {
             </span>
             Open to Data Analyst roles
           </motion.div>
-
-          <motion.p
-            variants={item}
-            className="mb-4 flex items-center gap-2 font-mono text-sm text-ink-dim"
-          >
-            <MapPin size={14} className="text-cyan" /> {site.location}
-          </motion.p>
 
           <motion.h1
             variants={item}
