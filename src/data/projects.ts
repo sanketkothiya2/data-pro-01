@@ -51,6 +51,28 @@ export const projects: Project[] = [
     liveUrl: "https://jlr-ai-benchmark-prediction-dashboard.onrender.com/",
   },
   {
+    slug: "hr-attrition",
+    title: "HR Workforce Attrition Analysis",
+    domain: "People Analytics · Power BI",
+    category: "BI & Data Apps",
+    year: "2025",
+    featured: true,
+    blurb:
+      "Power BI dashboard analyzing attrition across 1,470 employees — surfacing where talent slips through and giving HR a filterable view across department, role, age, and tenure.",
+    metrics: [
+      { value: "1,470", label: "Employees" },
+      { value: "16.12%", label: "Attrition rate" },
+      { value: "8+", label: "DAX measures" },
+    ],
+    highlights: [
+      "Analyzed attrition with DAX across department, job role, age group, and tenure.",
+      "Engineered KPI measures: attrition rate, active headcount, age-band segmentation.",
+      "Added slicers for filtering by education, gender, and department.",
+      "Layered validation and segmentation logic to keep every view reporting-accurate.",
+    ],
+    stack: ["Power BI", "DAX", "MS SQL Server", "Excel"],
+  },
+  {
     slug: "marketing-ab-testing",
     title: "Marketing Campaign A/B Testing & Regression",
     domain: "Statistical Analysis",
